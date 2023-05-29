@@ -20,8 +20,9 @@ final class PersonalListTableViewController: UITableViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        guard let contactInfoVC = segue.destination as? ContactInfoViewController else { return }
+        contactInfoVC.person = personList[indexPath.row]
     }
 
 }
@@ -40,6 +41,7 @@ extension PersonalListTableViewController {
         
         var content = cell.defaultContentConfiguration()
         content.text = person.firstName + " " + person.secondName
+        
         cell.contentConfiguration = content
         
         return cell

@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,6 +24,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="9ql-hs-gUj" kind="show" id="CID-9c-tON"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -35,6 +39,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iPS-UT-Br0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="850" y="282"/>
+        </scene>
+        <!--Contact Info View Controller-->
+        <scene sceneID="Crk-V0-VdY">
+            <objects>
+                <viewController id="9ql-hs-gUj" customClass="ContactInfoViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pQ8-0I-P3M">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="amS-YP-aGO">
+                                <rect key="frame" x="16" y="175" width="361" height="148"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIe-JM-4mO">
+                                        <rect key="frame" x="0.0" y="0.0" width="71" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuU-fH-z4m">
+                                        <rect key="frame" x="0.0" y="56" width="71" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUE-fq-g2P">
+                                        <rect key="frame" x="0.0" y="112" width="71" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JKF-FK-jl9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="amS-YP-aGO" firstAttribute="top" secondItem="JKF-FK-jl9" secondAttribute="top" constant="20" id="5Ii-E7-gVV"/>
+                            <constraint firstItem="amS-YP-aGO" firstAttribute="leading" secondItem="JKF-FK-jl9" secondAttribute="leading" constant="16" id="efM-kV-taz"/>
+                            <constraint firstItem="JKF-FK-jl9" firstAttribute="trailing" secondItem="amS-YP-aGO" secondAttribute="trailing" constant="16" id="kD2-b8-u7d"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="V00-PG-c9d"/>
+                    <connections>
+                        <outlet property="firtsNameLabel" destination="fIe-JM-4mO" id="Wvh-dE-Fav"/>
+                        <outlet property="mailLabel" destination="PUE-fq-g2P" id="2qF-cz-iKP"/>
+                        <outlet property="phoneNumberLabel" destination="vuU-fH-z4m" id="9oD-co-4fP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WtM-3q-tb1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1709" y="282"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9kI-1e-AUG">
